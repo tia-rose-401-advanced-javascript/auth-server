@@ -32,11 +32,11 @@ users.methods.comparePassword = function(password) {
     .then( valid => valid ? this : null);
 };
 
-users.statics.createFromOauth = function(email) {
+users.statics.createFromOauth = function(name) {
 
-  if(! email) { return Promise.reject('Validation Error'); }
+  if(! name) { return Promise.reject('Validation Error'); }
 
-  return this.findOne( {email} )
+  return this.findOne( {name} )
     .then(user => {
       if( !user ) { throw new Error('User Not Found'); }
       console.log('Welcome Back', user.username);
@@ -44,9 +44,9 @@ users.statics.createFromOauth = function(email) {
     })
     .catch( error => {
       console.log('Creating new user');
-      let username = email;
+      let username = name;
       let password = 'none';
-      return this.create({username, password, email});
+      return this.create({username, password, name});
     });
 
 };

@@ -3,6 +3,7 @@ const superagent = require('superagent');
 const Users = require('../users-model.js');
 const API = 'http://localhost:3000';
 const SERVICE = 'https://github.com/login/oauth/access_token';
+const ACCESS_API = 'https://api.github.com/user';
 
 let authorize = (request) => {
   // console.log(request);
@@ -27,7 +28,7 @@ let authorize = (request) => {
     })
     .then(token => {
       console.log(SERVICE, token);
-      return superagent.post(SERVICE)
+      return superagent.get(ACCESS_API)
         .set('Authorization', `Bearer ${token}`)
         .then( response => {
           let user = response.body;
@@ -37,7 +38,8 @@ let authorize = (request) => {
     })
     .then( oauthUser => {
       console.log('(4) Create Our Account');
-      return Users.createFromOauth(oauthUser.email);
+      console.log(oauthUser);
+      return Users.createFromOauth(oauthUser.name);
     })
     .then( actualUser => {
       return actualUser.generateToken(); 
