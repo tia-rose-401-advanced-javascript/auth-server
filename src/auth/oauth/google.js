@@ -8,6 +8,8 @@ const GTS = 'https://www.googleapis.com/oauth2/v4/token';
 const SERVICE = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect';
 
 let authorize = (request) => {
+  // console.log(request);
+  console.log(request.query);
   
   console.log('(1)', request.query.code);
   
@@ -46,4 +48,4 @@ let authorize = (request) => {
 };
 
 
-module.exports = authorize;
+module.exports = {authorize};
