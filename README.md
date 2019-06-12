@@ -7,7 +7,7 @@
 ### Author: Tia Rose, Feliple Delatorre, Chloie Parsons
 
 ### Links and Resources
-* [submission PR](https://github.com/tia-rose-401-advanced-javascript/www-basic-auth/pull/1)
+* [submission PR](https://github.com/tia-rose-401-advanced-javascript/auth-server/pull/1)
 * [heroku](https://afternoon-lowlands-41531.herokuapp.com/)
 
 #### Documentation
