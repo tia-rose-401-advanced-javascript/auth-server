@@ -1,8 +1,8 @@
-# auth-server
 # LAB - 12 
 
 ## Project Name
-# www-basic-auth
+# auth-server
+
 
 ### Author: Tia Rose, Feliple Delatorre, Chloie Parsons
 
