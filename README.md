@@ -4,7 +4,7 @@
 # auth-server
 
 
-### Author: Tia Rose, Feliple Delatorre, Chloie Parsons
+### Author: Tia Rose, Felipe Delatorre, Chloie Parsons
 
 ### Links and Resources
 * [submission PR](https://github.com/tia-rose-401-advanced-javascript/auth-server/pull/1)
