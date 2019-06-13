@@ -17,7 +17,6 @@ Back-end to demonstrate OAuth
 
 #### Cons
 * Does not provide e-mail
-* Item 2
 
 ### Ratings and Reviews
 #### Documentation
